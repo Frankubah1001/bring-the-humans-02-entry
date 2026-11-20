@@ -37,11 +37,11 @@ Browse the [bounty board](https://make.fun). Before starting, check the task, sc
 
 ## 3. Download the bounty kit
 
-The kit contains the rules, any starter files or data, and the command-line helper. Replace `<bounty-slug>` with the slug from the bounty page:
+The kit contains the rules, any starter files or data, and the command-line helper. This example downloads the kit used for the Bring the Humans Again bounty; replace its slug and folder with the ones from the bounty you chose:
 
 ```sh
-curl -sSL "https://make.fun/c/<bounty-slug>/kit" | tar xz
-cd <bounty-slug>-kit
+curl -sSL "https://make.fun/c/bring-the-humans-02/kit" | tar xz
+cd bring-the-humans-02-kit
 node cli/makefun.mjs --help
 ```
 
@@ -57,11 +57,11 @@ For bounties that ask for local grading, run the exact command in `RULES.txt`. P
 
 ## 5. Bundle, check, and submit
 
-From the kit directory, create a transcript bundle for the repository:
+From the kit directory, create a transcript bundle for the repository. This example assumes the entry folder is named `my-entry` beside the kit:
 
 ```sh
-node cli/makefun.mjs bundle --repo ../<your-repository> --out transcripts.tar.gz
-node cli/makefun.mjs check --kit . --repo ../<your-repository> --transcripts transcripts.tar.gz
+node cli/makefun.mjs bundle --repo ../my-entry --out transcripts.tar.gz
+node cli/makefun.mjs check --kit . --repo ../my-entry --transcripts transcripts.tar.gz
 ```
 
 Fix any reported issues, push the changes, and use the exact full SHA of the pushed commit. Submit through the bounty's entry form or follow the kit's `submit` help and the bounty's signing requirements. A later push does not change a commit already submitted.
