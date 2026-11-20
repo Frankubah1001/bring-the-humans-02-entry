@@ -51,6 +51,8 @@ Read `RULES.txt` before building. It may include a local grading command; use th
 
 Start a fresh agent session after the bounty opens. Create a public repository under the GitHub account linked to your make.fun profile, and include an OSI-approved license. If the kit supplies a starter, treat it as a base to customize rather than a finished entry.
 
+When a bounty requires a new repository, create it after the bounty opens; a new commit does not change an older repository's creation date.
+
 Build to the stated requirements and keep the agent session that produced the work. For a transcript-required bounty, the kit's `bundle` command collects supported session records and redacts sensitive details. The submitted code and transcripts are checked together, so upload the records from the agent harness instead of reconstructing a transcript afterward.
 
 For bounties that ask for local grading, run the exact command in `RULES.txt`. Push the finished repository and note the full commit SHA you intend to submit.
